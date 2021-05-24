@@ -21,7 +21,7 @@ export class App extends React.Component {
         <div>
           <h1>Video Player</h1>
           <Menu />
-          <Video />
+          <Video src={this.state.src}/>
         </div>
       );
     }
