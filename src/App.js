@@ -17,14 +17,17 @@ export class App extends React.Component {
     }
 
     chooseVideo(newVideo){
-        this.setState({src : VIDEOS[newVideo]});
+        // create a method which will be passed down to Menu to change App's state
+        this.setState(
+            {src : VIDEOS[newVideo]}
+            );
     }
 
     render() {
       return (
         <div>
           <h1>Video Player</h1>
-          <Menu />
+          <Menu chooseVideo={this.chooseVideo} />
           <Video src={this.state.src}/>
         </div>
       );
