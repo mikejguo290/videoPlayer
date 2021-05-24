@@ -14,6 +14,7 @@ export class App extends React.Component {
       super(props);
   
       this.state = { src: VIDEOS.fast };
+      this.chooseVideo=this.chooseVideo.bind(this);
     }
 
     chooseVideo(newVideo){
